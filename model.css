@@ -1,7 +1,0 @@
-/* media query */
-@media (max-width: 768px) {
-  /* styles for mobile devices */
-  body {
-    font-size: 14px;
-  }
-}
