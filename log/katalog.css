@@ -107,34 +107,6 @@ nav a:hover {
     display: block;
 }
 
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
-
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-        background-color: transparent;
-        border-radius: 0;
-        width: 100%;
-    }
-
-    .dropdown-content a {
-        padding-left: 30px;
-        color: white;
-    }
-
-    .dropdown-content a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-}
-
 .product-grid-container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -194,8 +166,77 @@ nav a:hover {
     margin: 0;
 }
 
+@media (max-width: 1024px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+}
+
 @media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    nav {
+        justify-content: space-between;
+        padding: 0 15px;
+        height: auto;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0,229,255,0.95);
+        border-radius: 8px;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+
+    .menu-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    nav li {
+        margin: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 12px;
+        font-size: 1rem;
     }
 }
